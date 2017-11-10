@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC415E31-2B6C-4723-A191-74BE6A861A3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myAlarmSystem</RootNamespace>
+    <AssemblyName>myAlarmSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>myAlarmSystem.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1500.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.77.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="myClass\myApp.cs" />
+    <Compile Include="myClass\myHelper.cs" />
+    <Compile Include="myClass\myMoveAPI.cs" />
+    <Compile Include="myClass\mySqliteAPI.cs" />
+    <Compile Include="myControl\myButtonCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myControl\myButtonCheck.Designer.cs">
+      <DependentUpon>myButtonCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myControl\myButtonNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myControl\myButtonNumber.Designer.cs">
+      <DependentUpon>myButtonNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForm\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForm\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForm\frmSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\frmSelect.Designer.cs">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="myControl\myButtonCheck.resx">
+      <DependentUpon>myButtonCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForm\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForm\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForm\frmSelect.resx">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="1500.ico" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\number_5.png" />
+    <None Include="Resources\number_4.png" />
+    <None Include="Resources\number_3.png" />
+    <None Include="Resources\number_2.png" />
+    <None Include="Resources\number_1.png" />
+    <None Include="Resources\number_0.png" />
+    <None Include="Resources\number_9.png" />
+    <None Include="Resources\number_8.png" />
+    <None Include="Resources\number_7.png" />
+    <None Include="Resources\number_6.png" />
+    <None Include="Resources\btncheckon5.png" />
+    <None Include="Resources\btncheckon4.png" />
+    <None Include="Resources\btncheckon3.png" />
+    <None Include="Resources\btncheckon2.png" />
+    <None Include="Resources\btncheckon1.png" />
+    <None Include="Resources\btncheckoff5.png" />
+    <None Include="Resources\btncheckoff4.png" />
+    <None Include="Resources\btncheckoff3.png" />
+    <None Include="Resources\btncheckoff2.png" />
+    <None Include="Resources\btncheckoff1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

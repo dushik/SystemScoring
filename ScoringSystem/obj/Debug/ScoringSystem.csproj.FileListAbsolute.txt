@@ -1,0 +1,15 @@
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.csprojResolveAssemblyReference.cache
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.csproj.ScoringSystem.exe.config
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.class.resources
+D:\study\ScoringSystem\obj\Debug\SYStem.class.resources
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.ErrorForm.resources
+D:\study\ScoringSystem\obj\Debug\SYStem.Login.resources
+D:\study\ScoringSystem\obj\Debug\SYStem.main.resources
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.mainForm.resources
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.Properties.Resources.resources
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.saomiaoForm.resources
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.temForm.resources
+D:\study\ScoringSystem\obj\Debug\SYStem.testForm.resources
+D:\study\ScoringSystem\obj\Debug\SYStem.user.resources
+D:\study\ScoringSystem\obj\Debug\SYStem.yueForm.resources
+D:\study\ScoringSystem\obj\Debug\ScoringSystem.csproj.GenerateResource.Cache

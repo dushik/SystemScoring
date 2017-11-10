@@ -1,0 +1,6 @@
+F:\myCsharp\VS2010\myAlarmSystem\myAlarmSystem\bin\Debug\myAlarmSystem.exe
+F:\myCsharp\VS2010\myAlarmSystem\myAlarmSystem\bin\Debug\myAlarmSystem.pdb
+F:\myCsharp\VS2010\myAlarmSystem\myAlarmSystem\obj\x86\Debug\myAlarmSystem.Properties.Resources.resources
+F:\myCsharp\VS2010\myAlarmSystem\myAlarmSystem\obj\x86\Debug\myAlarmSystem.csproj.GenerateResource.Cache
+F:\myCsharp\VS2010\myAlarmSystem\myAlarmSystem\obj\x86\Debug\myAlarmSystem.exe
+F:\myCsharp\VS2010\myAlarmSystem\myAlarmSystem\obj\x86\Debug\myAlarmSystem.pdb

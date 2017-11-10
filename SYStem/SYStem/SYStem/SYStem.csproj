@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\build\OpenCvSharp3-AnyCPU.props" Condition="Exists('..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\build\OpenCvSharp3-AnyCPU.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAA95AC5-C1EC-4D0A-9188-6C2D74B8DEDF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SYStem</RootNamespace>
+    <AssemblyName>SYStem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\数据库\mysql-connector-net-6.9.9-noinstall\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF5">
+      <HintPath>..\..\..\数据库\mysql-connector-net-6.9.9-noinstall\v4.5\MySql.Data.Entity.EF5.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6">
+      <HintPath>..\..\..\数据库\mysql-connector-net-6.9.9-noinstall\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin">
+      <HintPath>..\..\..\数据库\mysql-connector-net-6.9.9-noinstall\v4.5\MySql.Fabric.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>..\..\..\数据库\mysql-connector-net-6.9.9-noinstall\v4.5\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\lib\net40\OpenCvSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\lib\net40\OpenCvSharp.Blob.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\lib\net40\OpenCvSharp.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\lib\net40\OpenCvSharp.UserInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="myForm\myHelper.cs" />
+    <Compile Include="myForm\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\stuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\stuForm.Designer.cs">
+      <DependentUpon>stuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\class.Designer.cs">
+      <DependentUpon>class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIClientSupport.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\temForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\temForm.Designer.cs">
+      <DependentUpon>temForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\testForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\testForm.Designer.cs">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\saoMiaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\saoMiaoForm.Designer.cs">
+      <DependentUpon>saoMiaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\userForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\userForm.Designer.cs">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\yuejuanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\yuejuanForm.Designer.cs">
+      <DependentUpon>yuejuanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scoring\Demo.cs" />
+    <Compile Include="Scoring\ScoringObjective.cs" />
+    <Compile Include="Scoring\VerticalProjection.cs" />
+    <Compile Include="Form\subForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\subForm.Designer.cs">
+      <DependentUpon>subForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="myForm\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\stuForm.resx">
+      <DependentUpon>stuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\class.resx">
+      <DependentUpon>class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\temForm.resx">
+      <DependentUpon>temForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\testForm.resx">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\saoMiaoForm.resx">
+      <DependentUpon>saoMiaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\userForm.resx">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\yuejuanForm.resx">
+      <DependentUpon>yuejuanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\subForm.resx">
+      <DependentUpon>subForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ScoringSys\Controller\Controller.csproj">
+      <Project>{dbc8dd88-5ec3-45f9-a305-ec7d97c085c0}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ScoringSys\DAL\DAL.csproj">
+      <Project>{e2cd66c8-ab95-4e86-8aae-c7b8701d215a}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ScoringSys\Models\Models.csproj">
+      <Project>{25a09cf4-6e0c-48f0-bb70-dabafa3e7e7b}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1500.ico" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\number_9.png" />
+    <None Include="Resources\number_8.png" />
+    <None Include="Resources\number_7.png" />
+    <None Include="Resources\number_6.png" />
+    <None Include="Resources\number_5.png" />
+    <None Include="Resources\number_4.png" />
+    <None Include="Resources\number_3.png" />
+    <None Include="Resources\number_2.png" />
+    <None Include="Resources\number_1.png" />
+    <None Include="Resources\number_0.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\btncheckon5.png" />
+    <None Include="Resources\btncheckon4.png" />
+    <None Include="Resources\btncheckon3.png" />
+    <None Include="Resources\btncheckon2.png" />
+    <None Include="Resources\btncheckon1.png" />
+    <None Include="Resources\btncheckoff5.png" />
+    <None Include="Resources\btncheckoff4.png" />
+    <None Include="Resources\btncheckoff3.png" />
+    <None Include="Resources\btncheckoff2.png" />
+    <None Include="Resources\btncheckoff1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\build\OpenCvSharp3-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\ScoringSys\packages\OpenCvSharp3-AnyCPU.3.2.0.20170419\build\OpenCvSharp3-AnyCPU.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
